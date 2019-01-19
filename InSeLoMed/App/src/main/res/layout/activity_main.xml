@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.cypher.projinselo.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/icon"
+                android:gravity="center" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayout1"
+                android:gravity="center_vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/user_med"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/input"
+                    android:hint="Input the drug to be searched"
+                    android:inputType="textAutoComplete"
+                    android:padding="20dp"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayout2"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="search"
+                    android:background="#ff0000"
+                    android:gravity="center"
+                    android:onClick="onSearch" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_below="@id/relativeLayout3"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/transparent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/heading"
+                    android:scaleType="fitXY"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/migrane"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="mig"
+                                android:src="@drawable/sick1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/cough"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="cou"
+                                android:src="@drawable/sick3" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/fever"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="fev"
+                                android:src="@drawable/sick4" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/vomiting"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="vom"
+                                android:src="@drawable/sick2" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/relativeLayout4"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/faqs"
+                android:onClick="faqActivity"
+                android:background="@drawable/faq" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
